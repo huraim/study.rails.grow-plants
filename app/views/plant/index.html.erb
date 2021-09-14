@@ -1,0 +1,9 @@
+<br>
+<br>
+<% @plants.each do |plant| %>
+  <a href="/detail/<%= plant.id %>"> 
+    <img src="/plant_img/grow-0<%= plant.step %>.jpg" alt=""> <br>
+    <%= plant.title %> <br>
+  </a> <hr>
+<% end %>
+<a href="/write">식물 추가</a>

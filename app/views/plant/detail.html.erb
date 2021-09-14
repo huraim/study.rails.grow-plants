@@ -1,0 +1,15 @@
+<br>
+<br>
+<img src="/plant_img/grow-0<%= @plant.step %>.jpg" alt=""> <br>
+식물 이름: <%= @plant.title %> <br>
+식물 단계: <%= @plant.step %> <br>
+<% if @plant.step < 4 %>
+  <form action="/update/<%= @plant.id %>" method="post">
+    <input type="submit" value="성장">
+  </form>
+<% else %>
+  <a href="/delete/<%= @plant.id %>">수확하기</a>
+<% end %>
+<hr>
+<a href="/">목록으로</a> <br>
+<a href="/delete/<%= @plant.id %>">뽑아내기</a>
